@@ -85,6 +85,8 @@ class TiltFwd:
         # x[7+i] -> yang pressure
         # This repeats for each event
 
+        print("x", x)
+
         nevent = len(x) - 7
 
         tx = []
@@ -95,11 +97,14 @@ class TiltFwd:
             # xcen, ycen, depth, pressure, semimajor axis, semiminor axis, strike and dip angles in degrees
             xyang = np.concatenate((x[:3], [x[7 + i] * 1e6], x[3:7]))
 
+            print("xyang", xyang)
+
             ytx, yty = self.yang.forward(xyang, unravel=False)
 
             tx.append(ytx)
             ty.append(yty)
 
+        print(tx, ty)
         return (self.stations, tx, ty)
 
 
