@@ -1,0 +1,21 @@
+event_tag: Erebus
+client: IRIS
+client_debug: false
+event_selection: default
+seconds_before_ref: 3600
+seconds_after_ref: 3600
+networks: ER
+stations: NKB,E1S
+channels: BH?
+locations: '*'
+demean: false
+detrend: false
+remove_response: false
+resample_freq: null
+remove_clipped: true
+remove_insufficient_length: true
+remove_masked_data: true
+write_files: inv,sac
+plot_files: null
+log_level: WARNING
+
